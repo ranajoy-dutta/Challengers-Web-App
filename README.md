@@ -1,6 +1,6 @@
 # Challengers-Web-App
 Challengers.pythonanywhere.com
-##This is a repository for a web app developed in flask framework. It is still in development stage and being improvised.
+This is a repository for a web app developed in flask framework. It is still in development stage and being improvised.
 
 Steps to Run this:
   *  Clone this repository.
