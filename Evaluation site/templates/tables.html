@@ -1,0 +1,49 @@
+ <html>
+<head>
+   <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='anscss.css')}}">
+   <meta name="author" content="Ranajoy, Anant">
+   <title>Data Check</title>
+</head>>
+<body>
+ <h1 align="center">{{error}}</h1>
+      <table   id="t01" align="center">
+      <caption><h2>Recheck the Summations</h2></caption>
+         <thead>
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+         <col width="80">
+
+            <th>sno</td>
+            <th>Input test case</th>
+            <th>Variation test case</th>
+            <th>Garbage test case</th>
+            <th>Total 1</th>
+            <th>User Defined Function</th>
+            <th>Indentation</th>
+            <th>Total 2</th>
+            <th>Extra Variable</th>
+            <th>Cummilative</th>
+         </thead>
+         {% for row in rows %}
+            <tr>
+               <td>{{row["sno"]}}</td>
+               <td>{{row["input_test_case"]}}</td>
+               <td> {{ row["variation_test_case"]}}</td>
+               <td> {{ row["garbage_test_case"]}}</td>
+               <td>{{row["total1"]}}</td>
+               <td>{{row["user_defined_function"]}}</td>
+               <td>{{row["indentation"]}}</td>
+               <td>{{row["total2"]}}</td>
+               <td>{{row["extra_variable"]}}</td>
+               <td>{{row["cummilative"]}}</td>
+            </tr>
+         {% endfor %}
+</table>
+</body>
+</html>
