@@ -1,3 +1,10 @@
+"""This is a project made and implemented using Flask Framework with backend as SQLITE3 and front end designing in HTML5 and CSS3.
+The purpose of the project was to develop a platform where high level programming competitions can be thrown with the well defined
+deadline. We built this project and tested it by successfully organizing a National level programming Hackthon.
+The project was developed within 10 days of time interval(9 August 2017- 19 August 2017).
+This project is being developed by Ranajoy, BCA 3rd Semester, IITM, IP University, New Delhi- ranajoydutta7@gmail.com.
+and Anant Kaushik (Front End Designer), BCA 3rd Semester, IITM, IP University, New Delhi- anant.kaushik2@gmail.com"""
+
 from flask import Flask, render_template, request, redirect, url_for, g, session
 import sqlite3 as sql,os
 
@@ -24,7 +31,7 @@ def all():
                password=request.form['password']
                i=1
                session.pop('user', None)
-               if password=='recheckall' or password=='secondcheck':
+               if password=='qwerty089796' or password=='sdfssk':
                     session['user'] = password
                     return redirect(url_for('check',i=i))
                else:
@@ -32,12 +39,6 @@ def all():
                     return render_template('all.html',msg=msg)
           return render_template("all.html")
 
-
-@app.before_request
-def before_request():
-     g.user = None
-     if 'user' in session:
-          g.user = session['user']
 
 @app.route('/getsession')
 def getsession():
@@ -148,33 +149,6 @@ def prac(q):
     q=int(q)
     q += 1
     return redirect(url_for('check',i=q))
-"""
-@app.route('/res',methods=['GET','POST'])
-def res():
-     if request.method == 'POST':
-          con=sql.connect("/home/anantkaushik/mysite/database_ch.db")
-          cur=con.cursor()
-          input_test_case = int(request.form['input_test_case'])
-          variation_test_case = int(request.form['variation_test_case'])
-          garbage_test_case = int(request.form['garbage_test_case'])
-          total1 = input_test_case + variation_test_case + garbage_test_case
-          i = int(request.form['i'])
-          user_defined_function = int(request.form['user_defined_function'])
-          indentation = int(request.form['indentation'])
-          total2 = indentation + user_defined_function
-          time_taken = int(request.form['time_taken'])
-          flag=1
-          extra_variable = int(request.form['extra_variable'])
-          cummilative = total1 + total2 + extra_variable
-          cur.execute("update answer set input_test_case=?,variation_test_case=?,garbage_test_case=?,total1=?,user_defined_function=?,indentation=?,total2=?,extra_variable=?,Cummilative=? where sno=?",(input_test_case,variation_test_case,garbage_test_case,total1,user_defined_function,indentation,total2,extra_variable,cummilative,i))
-          cur.execute("update answer set flag=1,time_taken=? where sno=?",(time_taken,i,))
-          con.commit()
-          cur.close()
-          con.close()
-          return redirect(url_for('prac',q=i))
-     else:
-          print('asdadada')
-"""
 
 @app.route('/update',methods=['GET','POST'])
 def update():
@@ -230,7 +204,6 @@ def checked():
           except:
                con.rollback()
                return "<h1 align='center'>Transaction failed!</h1>"
-
 
 @app.route('/table')
 def table():
