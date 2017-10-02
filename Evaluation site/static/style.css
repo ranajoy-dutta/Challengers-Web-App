@@ -1,0 +1,97 @@
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background: radial-gradient(#ccadaa, #aaa);
+    overflow: hidden;
+}
+
+.moving-zone {
+    position: relative;
+    top: 20%;
+ 
+    width:500px; height:120px;
+    margin: auto;
+    perspective: 800px;
+}
+.popup {
+    position: absolute;
+    width:500px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px 0 20px 0;
+    transform-style: preserve-3d;
+    
+}
+.popup:before {
+    content: '';
+    position: absolute;
+    left:5%; top:5%;
+    width:90%; height:90%;
+    border-radius: inherit;
+    background: rgba(0,0,0,.1);
+    box-shadow: 0 0 40px 20px rgba(0,0,0,.1);
+    transform: translateZ(-100px);
+}
+.popup-content {
+    background: #444;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px 0 10px 0;
+}
+.popup-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 100;
+    text-align: center;
+    transform: translateZ(15px);
+}
+.popup-text b {
+    color: coral;
+    font-weight: 300;
+}
+@import "bourbon";
+
+.wrapper {  
+    margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 50px; 
+}
+
+.form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      border-radius: 15px 0 15px;
+        @include box-sizing(border-box);
+
+        &:focus {
+          z-index: 2;
+        
+    }
+
+    input[type="text"] {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    input[type="password"] {
+      margin-bottom: 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 0;
+    }
+}
+.btn{
+    border-radius: 5px;
+    width: 70px;
+    height: 35px;
+    margin-left: 70px;
+    margin-right: auto;
+    border-style: solid; 
+    box-shadow: 20px;
+    cursor: pointer;
+   
+}
