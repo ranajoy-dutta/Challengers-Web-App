@@ -1,0 +1,112 @@
+.nqbar{
+	background-color: #e7ecef;
+}
+.qbar{
+	padding-bottom: 10px;
+}
+.modal-body{
+	padding: 0;
+}
+.btn {
+    border-radius: 0px;
+    margin-top: 5px;
+}
+.lang {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+}
+.textinput {
+  float:left;
+  width: 100%;
+  min-height: 350px;
+  outline: none;
+  resize: none;
+  border: 1px solid #4b8df9;
+}
+select{
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+select:focus{
+    border:none;
+}
+button{
+	background: #4b8df9;
+	padding: 5px 10px 6px;
+	font-weight: bold;
+    line-height: 2;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+header{
+	background-color: #454545;
+	padding-top: 5px;
+	font-size: 28px;
+	font-family: 'Droid Serif', serif;
+}
+.h{
+	font-size: 18px;
+	padding-top: 10px;
+}
+.ah{
+	text-decoration: none;
+	color: white;
+}
+.ah:hover{
+	color: #C0C0C0;
+    cursor: none;
+	text-decoration: none;
+}
+.aq{
+	color: black;
+	text-decoration: none;
+}
+.aq:hover{
+	color: #2C3E50;
+	text-decoration: none;
+}
+.tf{
+	font-family: 'Bitter', serif;
+}
+hr{
+	margin: 0 15px 5px;
+}
+.btn-success {
+    color: #fff;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+@media only screen and (max-width: 500px){
+	header{
+		font-size: 20px;
+	}
+	.h{
+		font-size: 14px;
+	}
+}

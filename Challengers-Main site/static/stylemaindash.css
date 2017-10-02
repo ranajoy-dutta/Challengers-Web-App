@@ -1,0 +1,87 @@
+header{
+
+    text-align: center;
+     text-decoration-style: block;
+    color: white;
+    background: black ;
+     opacity: 0.85;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em;
+   }
+
+body
+{
+	background: url("c.jpg") no-repeat;
+	 background-size: cover;
+	background-attachment: fixed;
+			background-color:linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color:-webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+
+}
+
+.showcase
+{
+
+	 background:  #E6E4E1;
+	 opacity: .85;
+	border-radius: 1em;
+	padding: 4em;
+	margin: 4em;
+    margin-top: -3em;
+}
+#lg
+{
+   height: 4em;
+width: 45em;
+color: black;
+background: #D4D4D4;
+border-radius:2em;
+font-weight: bold;
+
+}
+#lg:hover
+{
+  background: #F1B55F;
+color: white;
+}
+.button
+{
+    float: right;
+ border: 0.11em solid;
+ border-radius: 0.4em;
+height: 2.4em;
+width: 5.3em;
+padding: 0.3em;
+margin-right: 1em;
+text-align: top;
+color: white ;
+  background-color: transparent;
+
+}
+.button:hover
+{
+  background-color: #B6B6B6;
+color: black;
+
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+ border-radius: 2em;
+}
+
+td, th {
+    border: 1px solid white;
+
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: #D1CECE;
+}
