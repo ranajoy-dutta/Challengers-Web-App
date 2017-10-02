@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ranajoy, Anant">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hackathon</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='anscss.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="row">
+            <span class="col-md-4 col-xs-5 h">
+                <a href="#" class="ah">Hackathon</a>
+            </span>
+            <span class="col-md-4 col-xs-3 text-center">
+                <p id="demo" style="color: white; font-size: 18px; padding-top: 3px;"></p>
+                <script>
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Sep 10, 2017 12:00:00").getTime();
+                        // Update the count down every 1 second
+                        var countdownfunction = setInterval(function() {
+
+                            // Get todays date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now an the count down date
+                            var distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Output the result in an element with id="demo"
+                            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+
+                            // If the count down is over, write some text
+                            if (distance < 0) {
+                                clearInterval(countdownfunction);
+                                document.getElementById("demo").innerHTML = "EXPIRED";
+                            }
+                        }, 1000);
+                     </script>
+            </span>
+            <span class="col-md-4 col-xs-4 text-right h">
+                <a href="/login" class="ah">End Test</a>
+            </span>
+        </header>
+        <div class="modal-body row">
+            <div class="col-md-3 nqbar">
+                <div class="row">
+                    <h4 class="col-md-12 tf">
+                        Questions
+                    </h4>
+                </div>
+                <div class="row">
+                    <hr style="border: 1px solid #454545;">
+                </div>
+                <table>
+                <br/><strong>&emsp;<u>Level 1: Craftsman</u></strong><br/>
+                    {% for row in rows1 %}
+                        <td class="col-md-12" >
+                            <tr class="row">
+                                {{row["level"]}}.
+                                <a href='{{row["level"]}}' style="color:black;">{{row["tit"]}}</a>
+                            </tr>
+                        </td>
+                    <br>
+                    {% endfor %}
+
+                    <br/><strong>&emsp;<u>Level 2: Sea Wolf</u></strong><br/>
+
+                    {% for row in rows2 %}
+
+                        <td class="col-md-12" >
+                            <tr class="row">
+                                {{row["level"]}}.
+                                <a href='{{row["level"]}}' style="color:black;">{{row["tit"]}}</a>
+                            </tr>
+                        </td>
+                    <br>
+                    {% endfor %}
+
+                <br/><strong>&emsp;<u>Level 3: Blenders Pride</u></strong><br/>
+
+                    {% for row in rows3 %}
+
+                        <td class="col-md-12" >
+                            <tr class="row">
+                                {{row["level"]}}.
+                                <a href='{{row["level"]}}' style="color:black;">{{row["tit"]}}</a>
+                            </tr>
+                        </td>
+                    <br>
+                    {% endfor %}
+
+                </table>
+                <a href="/ringless_mail" style="text-decoration:none;"><h1 style="font-family: 'Droid Serif', serif;color:#E74C3C;">Announcements</h1></a>
+            </div>
+            <div class="col-md-9 qbar">
+                <div class="row">
+                    <h3 class="col-md-12 tf">{{title|safe}}</h3>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+                <div class="row text-justify">
+                    <p class="col-md-12">{{about|safe}}</p>
+                </div>
+                <div class="row">
+                {% if i=='11' %}
+                    <img src="{{url_for('.static', filename='hand.jpg')}}"/>
+                    <div class="row text-justify">
+                    <p class="col-md-12">{{extra|safe}}</p>
+                {% endif %}
+                </div>
+
+
+                <form action = "{{ url_for('ans') }}" method = "POST">
+                    <h4 class="tf"><u><a href="https://code.hackerearth.com" target="_blank" style="text-decoration:none;color:black;">"Compile Your Code Here"</a></u> and save your solution below</h4>
+                    <input name="level" type="hidden" value="{{i}}" >
+                    <div class="row">
+                        <div class="col-md-12 tf">
+                            <pre><textarea class="textinput" name="ans">{{val|safe}}</textarea></pre>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <span class="col-md-1">
+                            <button type="submit" class="btn btn-default">Save</button>
+                        </span>
+                        <span class="col-md-1">
+                            <form action = "{{ url_for('pra') }}" method = "POST"><button type="submit" class="btn btn-default">Next</button><input name="level" type="hidden" value="{{i}}" ></form>
+                        </span>
+                    <span class="col-md-1">
+                            <a target="_top" href="mailto:challengers.info01@gmail.com?Subject=Doubst&body=Your Name:%0D%0AQuestions%20no:%0D%0ADoubts:%0D%0A">
+                                <span type="submit" class="btn btn-default" style="background-color:#4b8df9;color:white;">Any Doubts?</span>
+                            </a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
