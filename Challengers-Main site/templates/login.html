@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="author" content="Ranajoy, Anant">
+	<title>SIGN IN</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='bootstrap.min.css')}}" media="all"  />
+  	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='logincss.css')}}" media="all" />
+  	<link rel="icon" type="image/jpg" href="/static/log1.png" size="32x32">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<a href="/" tabindex="5">
+				<span class="col-md-2 col-xs-4 text-center linkbutton">HOME</span>
+			</a>
+			<h2 class="col-md-10 col-xs-8 text-center titlel">
+				Please Brief Yourself Before Going Ahead
+			</h2>
+		</div>
+		<div class="row">
+			<hr class="shades">
+		</div>
+		<div class="row" align="center"><span class="image"><img src="/static/logo.jpg" align="center" alt="" style="align=center;border-style: solid; border-width:0.5px;border-radius:50%; max-height: 10%; max-width: 10%;" /></span>
+			<span class="col-md-12 col-xs-12 text-center animatere pulse">
+				Sign In
+			</span>
+		</div>
+	</div><h1 align="center" style="text-decoration:underline;color:white; margin:1em 0em -1em 0em;font-size: 15pt; ">{{error}}</h1>
+	<div class="container formt text-center" style="border-style:double; border-width:5px; border-left:hidden;border-right:hidden; border-radius:20px;;">
+		<form style="margin-top: 15px;"  action = "{{ url_for('search') }}" method = "POST" >
+			<div class="form-group row"><br/>
+				<label for="Roll_Number" class="col-md-2 col-xs-4 text-align">E-Mail ID</label>
+				<input type="text" name="username" class="form-control col-md-4 col-xs-6" placeholder="e-mail id" required tabindex="1">
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-md-2 col-xs-4 text-align">Password:</label>
+				<input type="password" name="password" required class="form-control col-md-4 col-xs-6" placeholder="Password" tabindex="2">
+			</div>
+			<div class="row ran">
+				<button type="submit" tabindex="3" class="btn btn-default ran">Let Me In!</button>
+			</div>
+			<div class="row">
+				<a href="/registration" tabindex="4" class="col-md-12 registrationl">
+					New User? Register Now!
+				</a>
+			</div><footer align="center"><p>Visitors : <img src="http://www.reliablecounter.com/count.php?page=Chllengers.pythonanywhere.com&digit=style/plain/10/&reloads=0" alt="" title="" border="0" width="35px" height="15px"></a><br /></p></footer>
+		</form>
+	</div>
+</body>
+</html>

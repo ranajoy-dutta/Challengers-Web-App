@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Welcome  Challengers</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="Ranajoy, Anant">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
+		<link rel="icon" type="image/jpg" href="/static/log1.png" size="32x32">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			.poster{
+				height: 430px;width: 370px;;border-radius:10%;margin-top:-60px;border:hidden; transition: all .5s;
+			}
+			.iitm{
+    				font-size: 2.0em;
+    				float: left;
+					color: #ffffff;
+					padding-right: 2em;
+					width: 88%;
+					font-family: 'Droid Serif', serif;
+					opacity: 1;
+					text-align: center;
+    		}
+    		.ts{
+    		    margin-right: 30px;
+    		}
+    		.teamt{
+    		    margin: auto;
+    		    margin-left:-0.5em;
+    		    margin-bottom: 20px;
+    		}
+    		.iitmh{
+    			padding-left: 4em;
+    		}
+    		.iitml{
+    			float: left;
+    			padding-right: 15px;
+    			width: 12%;
+    		}
+			@media only screen and (max-width: 600px) {
+ 			   .poster{
+        		width: 200px;
+        		height: 230px;
+    			}
+			}
+			.poster:hover{
+	            -webkit-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                -o-transform: scale(1.5);
+                transform: scale(1.5);
+            }
+            .front{
+            	height: 260px;
+            	width: 200px;
+            	border-radius: 5%;
+            	background-color: rgb(243,243,243);
+            	position: absolute;
+            	backface-visibility: hidden;
+            	transform: rotateX(0deg);
+            	transition: all 0.5s;
+            }
+            .team{
+            	height: 260px;
+            	width: 200px;
+            	margin: 10px auto;
+            }
+            .teamimg{
+            	position: absolute;
+   				top: 50%;
+   				left: 50%;
+   				margin-left: -80px;
+   				margin-top: -100px;
+            	 height:160px;
+            	 width:160px;
+            	 border-radius: 50%;
+            }
+            .teamp{
+   				margin-left: 35px;
+   				margin-top: 200px;
+   				font-family: 'Droid Serif', serif;
+            }
+
+			@media only screen and (max-width: 970px) {
+ 			   .iitm{
+ 			   	font-size: 1.5em;
+ 			   	width: 100%;
+ 			   	padding-left: 2.8em;
+ 			   	padding-right: 2em;
+ 			   }
+ 			   .iitmh{
+ 			   		padding-left: 0;
+ 			   }
+ 			   .iitml{
+ 			   		width: 100%;
+ 			   		text-align: center;
+ 			   }
+			}
+			@media only screen and (max-width: 550px) {
+ 			   .iitm{
+ 			   	font-size: 1.5em;
+ 			   	width: 100%;
+ 			   	padding-left: 1em;
+ 			   	padding-right: 1em;
+ 			   }
+ 			   .teamt{
+ 			       margin: auto;
+ 			       margin-left:-1em;
+ 			   }
+ 			   .ts{
+ 			       margin-right: 0;
+ 			   }
+			}
+		</style>
+	</head>
+	<body>
+	    
+		<div id="wrapper">
+			<header id="header" class="alt" style="width:100%;">
+			    <span class="image"><img src="/static/logo.jpg" alt="" style=" margin-left: auto;border:0.2px black solid;border-radius:50%; max-height: 7em; max-width: 7em;" /></span>
+				<h1><strong>CHALLENGERS</strong>	</h1>
+				<p><strong>"Don't Limit Your Challenges, Challenge Your Limits...."</strong><br /></p>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a class="active">Home</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/registration">Register</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+			    <section id="intro" class="main" style="border-top:0;">
+					<div class="spotlight">
+						<div class="content">
+
+						<header class="major">
+							<h2 style="font-family: 'Droid Serif', serif;">Hackathon 2017</h2>
+						</header>
+						<p style="line-height: 2;">To all the dear participants of Challengers Hackathon 2017 (held on 9-10 Sep 2017)<br>
+						Thank you for making it a grand success Results are already announced.<br>
+						Please check your dashboard to know your result.<br>
+						Heartiest Congratulaion to one and all.<br>
+						We're proud to announce top 15 rankers at national level.</p>
+						<h3 style="float: left;padding-right: 5px;"><br>Congratulations and Thank you we will be back soon</h3>
+						<h3 id="demo"></h3>
+		                <script>
+		                        // Set the date we're counting down to
+		                        var countDownDate = new Date("Sep 10, 2017 12:00:00").getTime();
+		                        // Update the count down every 1 second
+		                        var countdownfunction = setInterval(function() {
+
+		                            // Get todays date and time
+		                            var now = new Date().getTime();
+
+		                            // Find the distance between now an the count down date
+		                            var distance = countDownDate - now;
+
+		                            // Time calculations for days, hours, minutes and seconds
+		                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		                            // Output the result in an element with id="demo"
+		                            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+		                            + minutes + "m " + seconds + "s ";
+
+		                            // If the count down is over, write some text
+		                            if (distance < 0) {
+		                                clearInterval(countdownfunction);
+		                                document.getElementById("demo").innerHTML = "EXPIRED";
+		                            }
+		                        }, 1000);
+		                </script>
+						<ul class="actions">
+							<li><a href="/registration" class="button special">Register</a></li>
+							<li><a href="/login" class="button">Practice</a></li>
+						</ul>
+						</div>
+					<span><img src="/static/poster.png" alt="poster" class="poster"/></span>
+					</div>
+				</section>
+
+
+						<!-- Get Started -->
+				<section id="cta" class="main special">
+					<header class="major">
+						<h2>“All Learners are not Challengers but all Challengers are learners.”</h2>
+						<h3><strong>We CHALLENGERS are Ardent Learners!</strong></h3>
+						<h3><strong>Why Challengers?</strong></h3>
+						<p>CHALLENGERS is a Rostrum for young students to raise their standard of learning from Parrot Fashion Learners to Bottlenose Dolphins. Challengers provide platform to represent your college in the challenges thrown by the students of other Colleges and Universities present across the Nation. </p>
+						<h3><strong>How it Works?</strong></h3>
+						<p>Right from Freshers to mid-levelers or final year students waiting for recruitment or going for further studies, Anyone and Everyone is welcome to Participate in Competitions hosted by Challengers. Challenge your friends over a problem. Try to find best solution. And learn…   </p>
+						<h3>Not only this but EARN POINTS and taste the FAME BY INDENTIFYING YOURSELF WITH YOUR GLOBAL RANK.</h3>
+						<h3><strong>How to Participate?</strong></h3>
+						<p>Take part in our college level, state level, national level competitions like Hackathons, Geeks++, Goonj, Case Studies which will be hosted by CHALLENGERS and WIN PRIZES!!<br> Last but not the least - meet new people, get creative, and have a good time!</p>
+						<h3><strong>Who are We?</strong></h3>
+						<p>We are the students at IITM, GGSIP University, New Delhi who built this concept (Python Framework), in order to make our conventional studies programs to match up with high speed technology drift going across the world. Join Us!</p>
+					</header>
+				</section>
+
+			</div>
+
+				<!-- Footer -->
+			<footer id="footer">
+				<div class="teamt" style="width:80%;background-color: rgb(243,243,243);border-radius: 50%;margin:auto;">
+					<h3 style="text-align: center; color: black;font-family: 'Droid Serif', serif; padding-top: 10px;">Team Challengers</h3>
+				</div>
+				<div class="mteam" style="width: 100%; height: 260px;margin: 10px auto;">
+					<div class = "team" style="margin: auto;">
+						<div class="front">
+							<img src="mam.jpg" class="teamimg">
+							<p class="teamp"  style="color: black;">Suruchi Sinha</p>
+						</div>
+					</div>
+				</div>
+				<div class = "team">
+					<div class="front">
+						<img src="rana.jpeg" class="teamimg">
+						<p class="teamp"  style="color: black;">Ranajoy Dutta</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="image.jpg" class="teamimg">
+						<p class="teamp"  style="color: black;">Anant Kaushik</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="mehak.jpeg" class="teamimg">
+						<p class="teamp"  style="color: black;">Mehak Tawakley</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="himanshi.jpeg" class="teamimg">
+						<p class="teamp"  style="color: black;">Himanshi Kohli</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="shivangi.jpg" class="teamimg">
+						<p class="teamp"  style="color: black; margin-left: 10px;">Shivangi Kharbanda</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="garvit.jpeg" class="teamimg">
+						<p class="teamp"  style="color: black;">Garvit Singh</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="nishant.jpg" class="teamimg">
+						<p class="teamp"  style="color: black;">Nishant Nirmal</p>
+					</div>
+				</div>
+				<div class = "team ">
+					<div class="front">
+						<img src="puneet.jpg" class="teamimg">
+						<p class="teamp"  style="color: black;">Puneet Malan</p>
+					</div>
+				</div>
+				<section style="width: 100%;padding-top: 20px;">
+					<h2>Technical Sponsorship:</h2>
+					<div style="text-align: center;">
+						<img src="srijan.jpg" class="ts" style="height: 200px;width: 330px;border-radius:5%;">
+						<img src="co.jpg" class ="ts" style="height: 200px;width: 330px;border-radius:5%;">
+					</div>
+				</section>
+				<h3 style="width: 100%; color: white;">Follow us on :</h3>
+				<section style="width: 100%;">
+					<ul class="icons">
+						<li> <a href="https://www.facebook.com/Challengers-338236789958921" target="new" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>-->
+								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>-->
+					</ul>
+				</section>
+
+				<p class="copyright"><strong>&copy;ALL COPYRIGHTS RESERVED</strong><br/>
+				<strong>Visitors : </strong><img src="http://www.reliablecounter.com/count.php?page=Chllengers.pythonanywhere.com&digit=style/plain/10/&reloads=0" alt="" title="" border="0" width="35px" height="15px"></a><br /></p>
+			</footer>
+
+		</div>
+
+
+	</body>
+</html>

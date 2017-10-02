@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="author" content="Ranajoy, Anant">
+	<title>Ringless Mail</title>
+	<style type="text/css">
+		body {
+			background: #4ca1af;
+  			background: -webkit-linear-gradient(to top, #4ca1af, #c4e0e5);
+  			background: linear-gradient(to bottom, #4ca1af, #c4e0e5);
+			background-attachment: fixed;
+		}
+		.container{
+			width: 70%;
+			/*background-color: #5DADE2;*/
+			background-color: rgba(39,55,70,0.3);
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	{% if user%}
+	<form  action = "{{ url_for('broad') }}" align="center" method = "POST" >
+		 <input name="ins" placeholder="message" type="text" style="width:90%;">
+		 </input>
+		<input value="Send" align="center" type="submit" ></form><br/>
+{% endif %}
+
+	<div class="container">
+		<h1 style="text-align: center;color: white;padding-top: 5px;margin-bottom: 0;">Ringless Mail</h1>
+		<hr>
+		<p style="padding-left: 10px;font-size: 20px;color: black;">{{inpu|safe}}</p>
+	</div>
+</body>
+</html>

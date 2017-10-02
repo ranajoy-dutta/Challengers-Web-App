@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/jpg" href="/static/log1.png" size="32x32">
+    <meta name="author" content="Ranajoy, Anant">
+    <link href={{url_for('.static', filename="stylemaindash.css")}} rel="stylesheet">
+    <title>Welcome|Admin</title>
+</head>
+<body>
+    <div  style="background-color: rgba(241,241,241,0.95);border:red;padding:0.5em 0 0 0;">
+      <h1 align="center">{{error}}</h1>
+      <form align="center"   action = "{{ url_for('delrec') }}" method = "POST" >
+          <label for="email" class="col-md-2 col-xs-4 text-align">Command : </label>
+          <input type="text" name="email" style="width: 500px; height: 30px;" placeholder="Command" required tabindex="1">
+          <input type="submit" value="Delete">
+      </form>
+      <h2 align="center" style="padding-bottom:0.5em">Total Registrations :: {{count}}</h2>
+    </div>
+    <table border = 1 style="opacity=0.5;">
+        <thead>
+            <td>Name</td>
+            <td>Roll number</td>
+            <td>College</td>
+            <td>Email</td>
+            <td>phone</td>
+            <td>semester</td>
+        </thead>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["name"]}}</td>
+          <td>{{row["roll_number"]}}</td>
+          <td> {{ row["college"]}}</td>
+          <td> {{ row["email"]}}</td>
+          <td>{{row["phone"]}}</td>
+          <td>{{row["semester"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
