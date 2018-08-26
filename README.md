@@ -10,4 +10,3 @@ Steps to Run this:
   	( Open CMD - Open python directory - type "pip install flask" )
   *  Create Virtual environment. 
   *  Run by opening app.py
-
