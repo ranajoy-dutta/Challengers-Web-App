@@ -220,8 +220,7 @@ def practice(i):
             con1.close()
 
             cur2.close()
-            con2.close()
-
+            con2.close() 
 
             return render_template("answer1.html",extra=extra,i=i,level=i,color=color,rows1=rows1,rows3=rows3,rows2=rows2,about=about,title=title,val=val)
        elif (int(i)<=15):
